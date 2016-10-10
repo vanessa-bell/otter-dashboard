@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mongoose Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="/client/static/style.css">
+</head>
+<body>
+<h1>OTTERS!!!</h1>
+<%for(var i =0; i < otters.length; i++){%>
+<div id="otter">
+	<p><img src="/client/static/otter.jpg"></p>
+	<p>Name: <%=otters[i].name%></p>
+	<p>Age: <%=otters[i].age%></p>
+	<p id="inline">Color:</p> <div id="color" style="background-color:<%=otters[i].color%>"></div>
+	<button><a href="/otters/<%=otters[i]._id%>">View <%=otters[i].name%>'s Profile</a>
+	<button><a href="/otters/<%=otters[i]._id%>/edit" method="GET">Edit</a></button>
+	<form action='/otters/<%=otters[i]._id%>/destroy' method="POST">
+		<input type="submit" value="Delete">
+	</form>
+</div>
+<%}%>
+<a id="add" href="/otters/add">Add a new otter!</a>
+</body>
+</html>

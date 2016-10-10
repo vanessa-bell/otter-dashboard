@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit the Otter</title>
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+	<form method="POST" action="/otters/<%=otter._id%>">
+		<label>Name:</label><input type="text" value="<%=otter.name%>"" name="name">
+		<label>Age:</label><input type="number" value="<%=otter.age%>"" name="age">
+		<label>Color:</label><input type="color" value="<%=otter.color%>" name="color">
+		<input type="submit" value="Make Edits">
+	</form>
+	<a href="/">Back to Romp of Otters</a>
+
+</body>
+</html>

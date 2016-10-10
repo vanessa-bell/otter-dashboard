@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Otter Profile</title>
+	<link rel="stylesheet" type="text/css" href="/client/static/style.css">
+</head>
+<body>
+<div id="otter">
+	<%if(otter){%>
+	<h1><%=otter.name%>'s Profile%></h1>
+	<p><img src="/client/static/otter.jpg"></p>
+	<p>Name: <%=otter.name%></p>
+	<p>Age: <%=otter.age%></p>
+	<p id="inline">Color:</p> <div id="color" style="background-color:<%=otter.color%>"></div>
+	<button><a href="/otters/<%=otter._id%>/edit" method="GET">Edit</a></button>
+	<form action='/otters/<%=otter._id%>/destroy' method="POST">
+		<input type="submit" value="Delete">
+	</form>
+	<%}%>
+	<a href="/">Back</a>
+
+
+</div>
+</body>
+</html>
