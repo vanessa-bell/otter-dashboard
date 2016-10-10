@@ -19,7 +19,7 @@ routes_setter(app);
 
 // Setting Server to Listen on Port: 6789
 app.listen(6789, function() {
-    console.log("mongoose_dashboard listening on port 6789");
+    console.log("otter-dashboard listening on port 6789");
 })
 
 
