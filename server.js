@@ -17,9 +17,9 @@ require('./server/config/mongoose.js');
 var routes_setter = require('./server/config/routes.js');
 routes_setter(app);
 
-// Setting Server to Listen on Port: 6789
-app.listen(6789, function() {
-    console.log("otter-dashboard listening on port 6789");
+// Setting Server to Listen on Port: 5000
+app.listen(5000, function() {
+    console.log("otter-dashboard listening on port 5000");
 })
 
 
